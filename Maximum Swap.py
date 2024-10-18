@@ -9,6 +9,6 @@ class Solution:
             for digit in range(9, value, -1):
                 if last.get(digit, -1) > index:
                     num_list[index], num_list[last[digit]] = num_list[last[digit]], num_list[index]
-                    return int(''.join(num_list))
+                    return int(''.join(map(str, num_list)))
 
         return num
